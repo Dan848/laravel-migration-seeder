@@ -19,11 +19,11 @@ return new class extends Migration
             $table->string("departure_station");
             $table->string("arrival_station");
             $table->time("departure_time");
-            $table->string("arrival_time");
+            $table->time("arrival_time");
             $table->integer("train_code");
             $table->integer("number_of_carriages");
-            $table->boolean("in_time");
-            $table->boolean("deleted");
+            $table->boolean("in_time")->default(true);
+            $table->boolean("deleted")->default(false);
             $table->timestamps();
         });
     }
