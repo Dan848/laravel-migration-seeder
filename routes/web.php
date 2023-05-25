@@ -16,3 +16,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [TrainsController::class, "index"])->name("home");
+Route::get('/order-by/{order}', [TrainsController::class, "showOrder"])->name("order");
